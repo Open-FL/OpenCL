@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.SvmAllocations
+namespace OpenCL.NET.Interop.SvmAllocations
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL SVM Allocations API.

@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.Devices
+namespace OpenCL.NET.Interop.Devices
 {
     /// <summary>
     /// Represents the different device types that can be supported by an OpenCL platform.

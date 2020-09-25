@@ -7,17 +7,17 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-using OpenCL.Devices;
-using OpenCL.Interop;
-using OpenCL.Interop.Contexts;
-using OpenCL.Interop.Memory;
-using OpenCL.Interop.Programs;
-using OpenCL.Memory;
-using OpenCL.Programs;
+using OpenCL.NET.Devices;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Contexts;
+using OpenCL.NET.Interop.Memory;
+using OpenCL.NET.Interop.Programs;
+using OpenCL.NET.Memory;
+using OpenCL.NET.Programs;
 
 #endregion
 
-namespace OpenCL.Contexts
+namespace OpenCL.NET.Contexts
 {
     /// <summary>
     /// Represents an OpenCL context.

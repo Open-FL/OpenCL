@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Platforms
+namespace OpenCL.NET.Interop.Platforms
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried from an OpenCl platform.

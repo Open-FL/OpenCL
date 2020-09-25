@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents an enumeration for the different data types that can be used for color channels in an image.

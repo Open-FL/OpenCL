@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.EnqueuedCommands
+namespace OpenCL.NET.Interop.EnqueuedCommands
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Enqueued Commands API.

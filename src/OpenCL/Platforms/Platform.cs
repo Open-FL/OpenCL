@@ -4,14 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using OpenCL.Devices;
-using OpenCL.Interop;
-using OpenCL.Interop.Devices;
-using OpenCL.Interop.Platforms;
+using OpenCL.NET.Devices;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Devices;
+using OpenCL.NET.Interop.Platforms;
 
 #endregion
 
-namespace OpenCL.Platforms
+namespace OpenCL.NET.Platforms
 {
     /// <summary>
     /// Represents an OpenCL platform.

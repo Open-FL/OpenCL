@@ -8,7 +8,7 @@ using System.Text;
 
 #endregion
 
-namespace OpenCL
+namespace OpenCL.NET
 {
     /// <summary>
     /// Represents a converter, which is used to convert byte arrays into several different CLR data types.

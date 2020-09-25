@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.EnqueuedCommands
+namespace OpenCL.NET.Interop.EnqueuedCommands
 {
     /// <summary>
     /// Represents an enumeration for the status of the execution of a command.

@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.Devices
+namespace OpenCL.NET.Interop.Devices
 {
     /// <summary>
     /// Represents an enumeration for the different execution capabilities of devices.

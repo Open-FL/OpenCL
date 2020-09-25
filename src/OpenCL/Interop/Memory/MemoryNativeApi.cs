@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Memory API.

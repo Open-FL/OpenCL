@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.SvmAllocations
+namespace OpenCL.NET.Interop.SvmAllocations
 {
     /// <summary>
     /// Represents the SVM memory flags, that are used to allocate SVMs.

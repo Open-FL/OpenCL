@@ -1,4 +1,4 @@
-namespace OpenCL.CommandQueues
+namespace OpenCL.NET.CommandQueues
 {
     /// <summary>
     /// Represents an enumeration for the status of the execution of a command.

@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents an enumeration for the different ways color channels can be ordered in a pixel of an image.

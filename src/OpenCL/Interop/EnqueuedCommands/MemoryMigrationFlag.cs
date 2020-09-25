@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.EnqueuedCommands
+namespace OpenCL.NET.Interop.EnqueuedCommands
 {
     /// <summary>
     /// Represents an enumeration for the different flags, that can be used when migrating memory.

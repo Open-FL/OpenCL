@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.CommandQueues
+namespace OpenCL.NET.Interop.CommandQueues
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Command Queues API.

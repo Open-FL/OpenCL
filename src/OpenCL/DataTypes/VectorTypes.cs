@@ -15,7 +15,7 @@
 // terms of the License.
 #endregion
 
-namespace OpenCL.DataTypes
+namespace OpenCL.NET.DataTypes
 {
 	using System;
 	using System.Diagnostics;

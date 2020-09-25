@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Contexts
+namespace OpenCL.NET.Interop.Contexts
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried from a context.

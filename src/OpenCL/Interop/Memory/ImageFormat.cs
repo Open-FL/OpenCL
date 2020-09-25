@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents the image format descriptor structure.

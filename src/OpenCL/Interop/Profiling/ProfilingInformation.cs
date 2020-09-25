@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Profiling
+namespace OpenCL.NET.Interop.Profiling
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried for profiling purposes.

@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Devices
+namespace OpenCL.NET.Interop.Devices
 {
     /// <summary>
     /// Represents an enumeration for the different type of local device memory.

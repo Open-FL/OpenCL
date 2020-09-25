@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.CommandQueues
+namespace OpenCL.NET.Interop.CommandQueues
 {
     /// <summary>
     /// Represents an enumeration for the command queue properties.

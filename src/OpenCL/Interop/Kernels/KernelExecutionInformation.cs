@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Kernels
+namespace OpenCL.NET.Interop.Kernels
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be set for the kernel execution.

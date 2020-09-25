@@ -3,13 +3,13 @@
 using System;
 using System.Runtime.InteropServices;
 
-using OpenCL.CommandQueues;
-using OpenCL.Interop;
-using OpenCL.Interop.Events;
+using OpenCL.NET.CommandQueues;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Events;
 
 #endregion
 
-namespace OpenCL.Events
+namespace OpenCL.NET.Events
 {
     /// <summary>
     /// Represents an event, which is returned by all OpenCL methods, that take longer. They can be used await asynchronous API calls. This class is awaitable and can be used with the C# <c>await</c> keyword. Please not, that when

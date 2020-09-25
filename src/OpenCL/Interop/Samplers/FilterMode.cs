@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Samplers
+namespace OpenCL.NET.Interop.Samplers
 {
     /// <summary>
     /// Represents an enumeration for the different filter modes that can be used for samplers.

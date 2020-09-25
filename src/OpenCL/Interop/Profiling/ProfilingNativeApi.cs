@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Profiling
+namespace OpenCL.NET.Interop.Profiling
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Profiling API.

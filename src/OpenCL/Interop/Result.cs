@@ -1,4 +1,4 @@
-namespace OpenCL.Interop
+namespace OpenCL.NET.Interop
 {
     /// <summary>
     /// Represents an enumeration for the result codes that are returned by the native OpenCL functions.

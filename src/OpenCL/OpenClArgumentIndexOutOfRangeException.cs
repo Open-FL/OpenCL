@@ -1,4 +1,4 @@
-namespace OpenCL
+namespace OpenCL.NET
 {
     public class OpenClArgumentIndexOutOfRangeException : OpenClException
     {

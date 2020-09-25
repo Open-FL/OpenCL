@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Devices
+namespace OpenCL.NET.Interop.Devices
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Devices API.

@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Events
+namespace OpenCL.NET.Interop.Events
 {
     /// <summary>
     /// Represents an enumeration that identifies the event information that can be queried from an event.

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Samplers
+namespace OpenCL.NET.Interop.Samplers
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Samplers API.

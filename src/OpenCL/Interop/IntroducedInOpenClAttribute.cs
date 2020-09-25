@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop
+namespace OpenCL.NET.Interop
 {
     /// <summary>
     /// Represents a custom attribute, which can be used to mark an element of the public API with the OpenCL version that is was introduced in.

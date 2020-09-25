@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace OpenCL
+namespace OpenCL.NET
 {
     /// <summary>
     /// Represents the abstract base class for all OpenCL objects, that are represented by a handle.

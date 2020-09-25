@@ -2,14 +2,14 @@
 
 using System;
 
-using OpenCL.Interop;
-using OpenCL.Interop.Kernels;
-using OpenCL.Interop.Programs;
-using OpenCL.Kernels;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Kernels;
+using OpenCL.NET.Interop.Programs;
+using OpenCL.NET.Kernels;
 
 #endregion
 
-namespace OpenCL.Programs
+namespace OpenCL.NET.Programs
 {
     /// <summary>
     /// Represents an OpenCL program.

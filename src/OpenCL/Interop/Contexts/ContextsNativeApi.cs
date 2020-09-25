@@ -3,11 +3,11 @@
 using System;
 using System.Runtime.InteropServices;
 
-using OpenCL.Interop.Devices;
+using OpenCL.NET.Interop.Devices;
 
 #endregion
 
-namespace OpenCL.Interop.Contexts
+namespace OpenCL.NET.Interop.Contexts
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Contexts API.

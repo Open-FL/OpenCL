@@ -2,11 +2,11 @@
 
 using System;
 
-using OpenCL.Interop;
+using OpenCL.NET.Interop;
 
 #endregion
 
-namespace OpenCL
+namespace OpenCL.NET
 {
     /// <summary>
     /// Represents an exception, which is thrown when there is an OpenCL error.

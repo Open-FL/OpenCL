@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Samplers
+namespace OpenCL.NET.Interop.Samplers
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried from a sampler object.

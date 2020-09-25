@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried from an pipe object.

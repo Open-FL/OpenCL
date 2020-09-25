@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Interop.Devices
+namespace OpenCL.NET.Interop.Devices
 {
     /// <summary>
     /// Represents an enumeration that identifies the device information that can be queried from a device.

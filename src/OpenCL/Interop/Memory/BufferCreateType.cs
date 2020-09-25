@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Memory
+namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
     /// Represents an enumeration for the buffer creation type.

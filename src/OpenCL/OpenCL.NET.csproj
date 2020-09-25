@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>OpenCL.NET</AssemblyName>
+    <RootNamespace>OpenCL.NET</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

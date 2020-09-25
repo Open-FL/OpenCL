@@ -1,4 +1,4 @@
-namespace OpenCL.Platforms
+namespace OpenCL.NET.Platforms
 {
     /// <summary>
     /// Represents an enumeration for the different profiles that can be supported by OpenCL platforms.

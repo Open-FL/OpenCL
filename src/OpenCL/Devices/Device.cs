@@ -4,12 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using OpenCL.Interop;
-using OpenCL.Interop.Devices;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Devices;
 
 #endregion
 
-namespace OpenCL.Devices
+namespace OpenCL.NET.Devices
 {
     /// <summary>
     /// Represents an OpenCL device.

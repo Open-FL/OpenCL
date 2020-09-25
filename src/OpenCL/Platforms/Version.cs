@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 #endregion
 
-namespace OpenCL.Platforms
+namespace OpenCL.NET.Platforms
 {
     /// <summary>
     /// Represents the version of an OpenCL platform.

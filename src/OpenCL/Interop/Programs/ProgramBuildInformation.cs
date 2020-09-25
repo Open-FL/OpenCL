@@ -1,4 +1,4 @@
-namespace OpenCL.Interop.Programs
+namespace OpenCL.NET.Interop.Programs
 {
     /// <summary>
     /// Represents an enumeration for the different types of information that can be queried from a program build.

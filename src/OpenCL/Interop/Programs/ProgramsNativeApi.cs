@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Programs
+namespace OpenCL.NET.Interop.Programs
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Programs API.

@@ -3,13 +3,13 @@
 using System;
 using System.Runtime.InteropServices;
 
-using OpenCL.Interop;
-using OpenCL.Interop.Kernels;
-using OpenCL.Memory;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Kernels;
+using OpenCL.NET.Memory;
 
 #endregion
 
-namespace OpenCL.Kernels
+namespace OpenCL.NET.Kernels
 {
     /// <summary>
     /// Represents an OpenCL kernel.

@@ -4,18 +4,18 @@ using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-using OpenCL.Contexts;
-using OpenCL.Devices;
-using OpenCL.Events;
-using OpenCL.Interop;
-using OpenCL.Interop.CommandQueues;
-using OpenCL.Interop.EnqueuedCommands;
-using OpenCL.Kernels;
-using OpenCL.Memory;
+using OpenCL.NET.Contexts;
+using OpenCL.NET.Devices;
+using OpenCL.NET.Events;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.CommandQueues;
+using OpenCL.NET.Interop.EnqueuedCommands;
+using OpenCL.NET.Kernels;
+using OpenCL.NET.Memory;
 
 #endregion
 
-namespace OpenCL.CommandQueues
+namespace OpenCL.NET.CommandQueues
 {
     /// <summary>
     /// Represents an OpenCL command queue.

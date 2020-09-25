@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Memory
+namespace OpenCL.NET.Memory
 {
     /// <summary>
     /// Represents the memory flags, that are used to create memory buffers.

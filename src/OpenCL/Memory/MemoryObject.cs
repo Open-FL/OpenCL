@@ -3,12 +3,12 @@
 using System;
 using System.Runtime.InteropServices;
 
-using OpenCL.Interop;
-using OpenCL.Interop.Memory;
+using OpenCL.NET.Interop;
+using OpenCL.NET.Interop.Memory;
 
 #endregion
 
-namespace OpenCL.Memory
+namespace OpenCL.NET.Memory
 {
     /// <summary>
     /// Represents an OpenCL memory object.

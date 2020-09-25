@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-namespace OpenCL.Interop.Events
+namespace OpenCL.NET.Interop.Events
 {
     /// <summary>
     /// Represents a wrapper for the native methods of the OpenCL Events API.

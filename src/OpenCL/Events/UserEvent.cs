@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace OpenCL.Events
+namespace OpenCL.NET.Events
 {
     /// <summary>
     /// Represents an OpenCL event, which has been created by the user and is not bound to a command enqueued on the command queue.
