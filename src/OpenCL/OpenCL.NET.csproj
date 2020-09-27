@@ -1,22 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>OpenCL.NET</AssemblyName>
     <RootNamespace>OpenCL.NET</RootNamespace>
+    <Version>0.0.0.1</Version>
+    <AssemblyVersion>0.0.1.1</AssemblyVersion>
+    <FileVersion>0.0.1.1</FileVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <None Update="DataTypes\VectorTypes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VectorTypes.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="DataTypes\VectorTypes.cs">
       <DesignTime>True</DesignTime>
@@ -24,5 +23,4 @@
       <DependentUpon>VectorTypes.tt</DependentUpon>
     </Compile>
   </ItemGroup>
-
 </Project>
