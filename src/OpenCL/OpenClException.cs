@@ -9,7 +9,7 @@ using OpenCL.NET.Interop;
 namespace OpenCL.NET
 {
     /// <summary>
-    /// Represents an exception, which is thrown when there is an OpenCL error.
+    ///     Represents an exception, which is thrown when there is an OpenCL error.
     /// </summary>
     public class OpenClException : Exception
     {
@@ -17,7 +17,7 @@ namespace OpenCL.NET
         #region Public Properties
 
         /// <summary>
-        /// Gets the error code that was returned by OpenCL.
+        ///     Gets the error code that was returned by OpenCL.
         /// </summary>
         public Result Result { get; }
 
@@ -26,14 +26,14 @@ namespace OpenCL.NET
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         public OpenClException()
         {
         }
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         /// <param name="result">The error code that was returned by OpenCL.</param>
         public OpenClException(Result result)
@@ -42,7 +42,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         /// <param name="message">An error message.</param>
         public OpenClException(string message)
@@ -51,7 +51,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         /// <param name="message">An error message.</param>
         /// <param name="result">The error code that was returned by OpenCL.</param>
@@ -62,7 +62,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         /// <param name="message">An error message.</param>
         /// <param name="inner">The inner exception, which is the root cause for this exception.</param>
@@ -72,7 +72,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Initializes a new <see cref="OpenClException"/> instance.
+        ///     Initializes a new <see cref="OpenClException" /> instance.
         /// </summary>
         /// <param name="message">An error message.</param>
         /// <param name="inner">The inner exception, which is the root cause for this exception.</param>

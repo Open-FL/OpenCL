@@ -18,7 +18,7 @@ using OpenCL.NET.Memory;
 namespace OpenCL.NET.CommandQueues
 {
     /// <summary>
-    /// Represents an OpenCL command queue.
+    ///     Represents an OpenCL command queue.
     /// </summary>
     public class CommandQueue : HandleBase
     {
@@ -26,7 +26,7 @@ namespace OpenCL.NET.CommandQueues
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="CommandQueue"/> instance.
+        ///     Initializes a new <see cref="CommandQueue" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL command queue.</param>
         internal CommandQueue(IntPtr handle)
@@ -39,11 +39,14 @@ namespace OpenCL.NET.CommandQueues
         #region Public Static Methods
 
         /// <summary>
-        /// Creates a new command queue for the specified context and device.
+        ///     Creates a new command queue for the specified context and device.
         /// </summary>
         /// <param name="context">The context for which the command queue is to be created.</param>
         /// <param name="device">The devices for which the command queue is to be created.</param>
-        /// <exception cref="OpenClException">If the command queue could not be created, then an <see cref="OpenClException"/> exception is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the command queue could not be created, then an <see cref="OpenClException" />
+        ///     exception is thrown.
+        /// </exception>
         /// <returns>Returns the created command queue.</returns>
         public static CommandQueue CreateCommandQueue(Context context, Device device)
         {
@@ -71,7 +74,7 @@ namespace OpenCL.NET.CommandQueues
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the command queue.
+        ///     Disposes of the resources that have been acquired by the command queue.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -91,7 +94,7 @@ namespace OpenCL.NET.CommandQueues
         #region Public Methods
 
         /// <summary>
-        /// Reads the specified memory object associated with this command queue asynchronously.
+        ///     Reads the specified memory object associated with this command queue asynchronously.
         /// </summary>
         /// <param name="memoryObject">The memory object that is to be read.</param>
         /// <param name="outputSize">The number of array elements that are to be returned.</param>
@@ -181,7 +184,7 @@ namespace OpenCL.NET.CommandQueues
         }
 
         /// <summary>
-        /// Reads the specified memory object associated with this command queue.
+        ///     Reads the specified memory object associated with this command queue.
         /// </summary>
         /// <param name="memoryObject">The memory object that is to be read.</param>
         /// <param name="outputSize">The number of array elements that are to be returned.</param>
@@ -237,7 +240,7 @@ namespace OpenCL.NET.CommandQueues
         }
 
         /// <summary>
-        /// Reads the specified memory object associated with this command queue.
+        ///     Reads the specified memory object associated with this command queue.
         /// </summary>
         /// <param name="memoryObject">The memory object that is to be read.</param>
         /// <param name="outputSize">The number of array elements that are to be returned.</param>
@@ -283,12 +286,15 @@ namespace OpenCL.NET.CommandQueues
         }
 
         /// <summary>
-        /// Enqueues a n-dimensional kernel to the command queue, which is executed asynchronously.
+        ///     Enqueues a n-dimensional kernel to the command queue, which is executed asynchronously.
         /// </summary>
         /// <param name="kernel">The kernel that is to be enqueued.</param>
         /// <param name="workDimension">The dimensionality of the work.</param>
         /// <param name="workUnitsPerKernel">The number of work units per kernel.</param>
-        /// <exception cref="OpenClException">If the kernel could not be enqueued, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the kernel could not be enqueued, then an <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         public Task EnqueueNDRangeKernelAsync(Kernel kernel, int workDimension, int workUnitsPerKernel)
         {
             // Creates a new task completion source, which is used to signal when the command has completed
@@ -346,12 +352,15 @@ namespace OpenCL.NET.CommandQueues
         }
 
         /// <summary>
-        /// Enqueues a n-dimensional kernel to the command queue.
+        ///     Enqueues a n-dimensional kernel to the command queue.
         /// </summary>
         /// <param name="kernel">The kernel that is to be enqueued.</param>
         /// <param name="workDimension">The dimensionality of the work.</param>
         /// <param name="workUnitsPerKernel">The number of work units per kernel.</param>
-        /// <exception cref="OpenClException">If the kernel could not be enqueued, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the kernel could not be enqueued, then an <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         public void EnqueueNDRangeKernel(Kernel kernel, int workDimension, int workUnitsPerKernel)
         {
             // Enqueues the kernel

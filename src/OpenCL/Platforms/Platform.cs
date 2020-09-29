@@ -9,12 +9,14 @@ using OpenCL.NET.Interop;
 using OpenCL.NET.Interop.Devices;
 using OpenCL.NET.Interop.Platforms;
 
+using DeviceType = OpenCL.NET.Devices.DeviceType;
+
 #endregion
 
 namespace OpenCL.NET.Platforms
 {
     /// <summary>
-    /// Represents an OpenCL platform.
+    ///     Represents an OpenCL platform.
     /// </summary>
     public class Platform : HandleBase
     {
@@ -22,7 +24,7 @@ namespace OpenCL.NET.Platforms
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Platform"/> instance.
+        ///     Initializes a new <see cref="Platform" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL platform.</param>
         internal Platform(IntPtr handle)
@@ -35,12 +37,16 @@ namespace OpenCL.NET.Platforms
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the OpenCL platform.
+        ///     Retrieves the specified information about the OpenCL platform.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="platformInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="platformInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         private T GetPlatformInformation<T>(PlatformInformation platformInformation)
         {
             // Retrieves the size of the return value in bytes, this is used to later get the full information
@@ -80,12 +86,15 @@ namespace OpenCL.NET.Platforms
         #region Public Methods
 
         /// <summary>
-        /// Gets all devices of the platform that match the specified device type.
+        ///     Gets all devices of the platform that match the specified device type.
         /// </summary>
         /// <param name="deviceType">The type of devices that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the devices could not be retrieved, then a <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the devices could not be retrieved, then a <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         /// <returns>Returns a list of all devices that matched the specified device type.</returns>
-        public IEnumerable<Device> GetDevices(Devices.DeviceType deviceType)
+        public IEnumerable<Device> GetDevices(DeviceType deviceType)
         {
             // Gets the number of available devices of the specified type
             uint numberOfAvailableDevices;
@@ -127,9 +136,12 @@ namespace OpenCL.NET.Platforms
         #region Public Static Methods
 
         /// <summary>
-        /// Gets all the available platforms.
+        ///     Gets all the available platforms.
         /// </summary>
-        /// <exception cref="InvalidOperationException">If the platforms could not be queried, then an <see cref="InvalidOperationException"/> is thrown.</exception>
+        /// <exception cref="InvalidOperationException">
+        ///     If the platforms could not be queried, then an
+        ///     <see cref="InvalidOperationException" /> is thrown.
+        /// </exception>
         /// <returns>Returns a list with all the availabe platforms.</returns>
         public static IEnumerable<Platform> GetPlatforms()
         {
@@ -165,12 +177,12 @@ namespace OpenCL.NET.Platforms
         #region Public Properties
 
         /// <summary>
-        /// Contains the name of the OpenCL platform.
+        ///     Contains the name of the OpenCL platform.
         /// </summary>
         private string name;
 
         /// <summary>
-        /// Gets the name of the OpenCL platform.
+        ///     Gets the name of the OpenCL platform.
         /// </summary>
         public string Name
         {
@@ -186,12 +198,12 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the name of the vendor of the OpenCL platform.
+        ///     Contains the name of the vendor of the OpenCL platform.
         /// </summary>
         private string vendor;
 
         /// <summary>
-        /// Gets the name of the vendor of the OpenCL platform.
+        ///     Gets the name of the vendor of the OpenCL platform.
         /// </summary>
         public string Vendor
         {
@@ -207,12 +219,12 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the version of the OpenCL platform.
+        ///     Contains the version of the OpenCL platform.
         /// </summary>
         private Version version;
 
         /// <summary>
-        /// Gets the version of the OpenCL platform.
+        ///     Gets the version of the OpenCL platform.
         /// </summary>
         public Version Version
         {
@@ -228,12 +240,12 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the profile supported by the OpenCL platform.
+        ///     Contains the profile supported by the OpenCL platform.
         /// </summary>
         private Profile? profile;
 
         /// <summary>
-        /// Gets the profile supported by the OpenCL platform.
+        ///     Gets the profile supported by the OpenCL platform.
         /// </summary>
         public Profile Profile
         {
@@ -257,12 +269,12 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the extensions supported by the OpenCL platform.
+        ///     Contains the extensions supported by the OpenCL platform.
         /// </summary>
         private IEnumerable<string> extensions;
 
         /// <summary>
-        /// Gets the extensions support by the OpenCL platform.
+        ///     Gets the extensions support by the OpenCL platform.
         /// </summary>
         public IEnumerable<string> Extensions
         {
@@ -278,12 +290,12 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the the resolution of the host timer in nanoseconds.
+        ///     Contains the the resolution of the host timer in nanoseconds.
         /// </summary>
         private long? platformHostTimerResolution;
 
         /// <summary>
-        /// Gets the the resolution of the host timer in nanoseconds.
+        ///     Gets the the resolution of the host timer in nanoseconds.
         /// </summary>
         public long PlatformHostTimerResolution
         {
@@ -300,12 +312,14 @@ namespace OpenCL.NET.Platforms
         }
 
         /// <summary>
-        /// Contains the function name suffix used to identify extension functions to be directed to this platform by the ICD Loader.
+        ///     Contains the function name suffix used to identify extension functions to be directed to this platform by the ICD
+        ///     Loader.
         /// </summary>
         private string platformIcdSuffix;
 
         /// <summary>
-        /// Gets the function name suffix used to identify extension functions to be directed to this platform by the ICD Loader.
+        ///     Gets the function name suffix used to identify extension functions to be directed to this platform by the ICD
+        ///     Loader.
         /// </summary>
         public string PlatformIcdSuffix
         {

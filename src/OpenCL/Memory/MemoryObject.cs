@@ -11,7 +11,7 @@ using OpenCL.NET.Interop.Memory;
 namespace OpenCL.NET.Memory
 {
     /// <summary>
-    /// Represents an OpenCL memory object.
+    ///     Represents an OpenCL memory object.
     /// </summary>
     public abstract class MemoryObject : HandleBase
     {
@@ -19,7 +19,7 @@ namespace OpenCL.NET.Memory
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="MemoryObject"/> instance.
+        ///     Initializes a new <see cref="MemoryObject" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL memory object.</param>
         protected MemoryObject(IntPtr handle, object handleIdentifier)
@@ -32,12 +32,16 @@ namespace OpenCL.NET.Memory
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the OpenCL memory object.
+        ///     Retrieves the specified information about the OpenCL memory object.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="memoryObjectInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="memoryObjectInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         private T GetMemoryObjectInformation<T>(MemoryObjectInformation memoryObjectInformation)
         {
             // Retrieves the size of the return value in bytes, this is used to later get the full information
@@ -76,7 +80,7 @@ namespace OpenCL.NET.Memory
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the memory object.
+        ///     Disposes of the resources that have been acquired by the memory object.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -96,12 +100,12 @@ namespace OpenCL.NET.Memory
         #region Public Properties
 
         /// <summary>
-        /// Contains the size of the contents of the memory object in bytes.
+        ///     Contains the size of the contents of the memory object in bytes.
         /// </summary>
         private long? size;
 
         /// <summary>
-        /// Gets the size of the contents of the memory object in bytes.
+        ///     Gets the size of the contents of the memory object in bytes.
         /// </summary>
         public long Size
         {
@@ -124,12 +128,12 @@ namespace OpenCL.NET.Memory
         }
 
         /// <summary>
-        /// Contains the flags with which the memory object was created.
+        ///     Contains the flags with which the memory object was created.
         /// </summary>
         private MemoryFlag? flags;
 
         /// <summary>
-        /// Gets the flags with which the memory object was created.
+        ///     Gets the flags with which the memory object was created.
         /// </summary>
         public MemoryFlag Flags
         {

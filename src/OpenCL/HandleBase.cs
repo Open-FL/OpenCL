@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace OpenCL.NET
 {
     /// <summary>
-    /// Represents the abstract base class for all OpenCL objects, that are represented by a handle.
+    ///     Represents the abstract base class for all OpenCL objects, that are represented by a handle.
     /// </summary>
     public abstract class HandleBase : IEquatable<HandleBase>, IDisposable
     {
@@ -16,7 +16,7 @@ namespace OpenCL.NET
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="HandleBase"/> instance.
+        ///     Initializes a new <see cref="HandleBase" /> instance.
         /// </summary>
         /// <param name="handle">The handle that represents the OpenCL object.</param>
         protected HandleBase(IntPtr handle, object handleIdentifier, bool needsDisposal)
@@ -37,12 +37,12 @@ namespace OpenCL.NET
         public bool NeedsDisposal { get; }
 
         /// <summary>
-        /// Gets the handle to the OpenCL object.
+        ///     Gets the handle to the OpenCL object.
         /// </summary>
         internal IntPtr Handle { get; private set; }
 
         /// <summary>
-        /// Gets a value that determines whether the object has alread been disposed of.
+        ///     Gets a value that determines whether the object has alread been disposed of.
         /// </summary>
         public bool IsDisposed { get; private set; }
 
@@ -51,7 +51,7 @@ namespace OpenCL.NET
         #region Public Operators
 
         /// <summary>
-        /// Checks if both operands are equal.
+        ///     Checks if both operands are equal.
         /// </summary>
         /// <param name="leftOperand">The left operand.</param>
         /// <param name="rightOperand">The right operand</param>
@@ -75,7 +75,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Checks if both operands are unequal.
+        ///     Checks if both operands are unequal.
         /// </summary>
         /// <param name="leftOperand">The left operand.</param>
         /// <param name="rightOperand">The right operand</param>
@@ -90,7 +90,7 @@ namespace OpenCL.NET
         #region Object Implementation
 
         /// <summary>
-        /// Checks if the specified object is equal to this.
+        ///     Checks if the specified object is equal to this.
         /// </summary>
         /// <param name="obj">The other object that is to be tested for equality.</param>
         /// <returns>Returns <c>true</c> if both objects point to the same underlying unmanaged memory and <c>false</c> otherwise.</returns>
@@ -114,7 +114,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Checks if the specified object is equal to this.
+        ///     Checks if the specified object is equal to this.
         /// </summary>
         /// <param name="other">The other object that is to be tested for equality.</param>
         /// <returns>Returns <c>true</c> if both objects point to the same underlying unmanaged memory and <c>false</c> otherwise.</returns>
@@ -131,9 +131,12 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Serves as the default hash function.
+        ///     Serves as the default hash function.
         /// </summary>
-        /// <returns>Returns a hash code for the current object, which is the numeric representation of the pointer that points to the underlying unmanaged memory.</returns>
+        /// <returns>
+        ///     Returns a hash code for the current object, which is the numeric representation of the pointer that points to
+        ///     the underlying unmanaged memory.
+        /// </returns>
         public override int GetHashCode()
         {
             return Handle.ToInt32();
@@ -144,11 +147,10 @@ namespace OpenCL.NET
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of all acquired resources.
+        ///     Disposes of all acquired resources.
         /// </summary>
         public virtual void Dispose()
         {
-
             // Disposes of all acquired resources
 
             if (NeedsDisposal)
@@ -183,7 +185,7 @@ namespace OpenCL.NET
         {
             objects.Remove(bytes);
         }
-        
+
         public override string ToString()
         {
             return GetType().Name + ":" + Handle;

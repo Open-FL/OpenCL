@@ -11,7 +11,7 @@ using System.Text;
 namespace OpenCL.NET
 {
     /// <summary>
-    /// Represents a converter, which is used to convert byte arrays into several different CLR data types.
+    ///     Represents a converter, which is used to convert byte arrays into several different CLR data types.
     /// </summary>
     public static class InteropConverter
     {
@@ -19,7 +19,7 @@ namespace OpenCL.NET
         #region Private Static Fields
 
         /// <summary>
-        /// Contains a map, which maps a data type to a converter that is able to convert it.
+        ///     Contains a map, which maps a data type to a converter that is able to convert it.
         /// </summary>
         private static readonly Dictionary<Type, Func<byte[], object>> ConverterMap =
             new Dictionary<Type, Func<byte[], object>>();
@@ -29,11 +29,14 @@ namespace OpenCL.NET
         #region Public Static Methods
 
         /// <summary>
-        /// Converts the specified data to the data type specified as type parameter.
+        ///     Converts the specified data to the data type specified as type parameter.
         /// </summary>
         /// <typeparam name="T">The data type into which the data is to be converted.</typeparam>
         /// <param name="data">The data that is to be converted.</param>
-        /// <exception cref="InvalidOperationException">If no fitting convert could be found, then an <see cref="InvalidOperationException"/> is thrown.</exception>
+        /// <exception cref="InvalidOperationException">
+        ///     If no fitting convert could be found, then an
+        ///     <see cref="InvalidOperationException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the converted data.</returns>
         public static T To<T>(byte[] data)
         {
@@ -79,7 +82,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Converts a byte array to a 32 bit integer value.
+        ///     Converts a byte array to a 32 bit integer value.
         /// </summary>
         /// <param name="data">The byte array that is to be converted.</param>
         /// <returns>Returns the converted data.</returns>
@@ -89,7 +92,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Converts a byte array to a 32 bit unsigned integer value.
+        ///     Converts a byte array to a 32 bit unsigned integer value.
         /// </summary>
         /// <param name="data">The byte array that is to be converted.</param>
         /// <returns>Returns the converted data.</returns>
@@ -99,7 +102,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Converts a byte array to a 64 bit integer value.
+        ///     Converts a byte array to a 64 bit integer value.
         /// </summary>
         /// <param name="data">The byte array that is to be converted.</param>
         /// <returns>Returns the converted data.</returns>
@@ -109,7 +112,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Converts a byte array to a 64 bit unsigned integer value.
+        ///     Converts a byte array to a 64 bit unsigned integer value.
         /// </summary>
         /// <param name="data">The byte array that is to be converted.</param>
         /// <returns>Returns the converted data.</returns>
@@ -119,7 +122,7 @@ namespace OpenCL.NET
         }
 
         /// <summary>
-        /// Converts a byte array to a string value.
+        ///     Converts a byte array to a string value.
         /// </summary>
         /// <param name="data">The byte array that is to be converted.</param>
         /// <returns>Returns the converted data.</returns>

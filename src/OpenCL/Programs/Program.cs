@@ -12,7 +12,7 @@ using OpenCL.NET.Kernels;
 namespace OpenCL.NET.Programs
 {
     /// <summary>
-    /// Represents an OpenCL program.
+    ///     Represents an OpenCL program.
     /// </summary>
     public class Program : HandleBase
     {
@@ -20,7 +20,7 @@ namespace OpenCL.NET.Programs
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Program"/> instance.
+        ///     Initializes a new <see cref="Program" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL program.</param>
         internal Program(IntPtr handle)
@@ -33,10 +33,10 @@ namespace OpenCL.NET.Programs
         #region Public Methods
 
         /// <summary>
-        /// Creates a kernel with the specified name from the program.
+        ///     Creates a kernel with the specified name from the program.
         /// </summary>
         /// <param name="kernelName">The name of the kernel that is defined in the program.</param>
-        /// <exception cref="OpenClException">If the kernel could not be created, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">If the kernel could not be created, then an <see cref="OpenClException" /> is thrown.</exception>
         /// <returns>Returns the created kernel.</returns>
         public Kernel CreateKernel(string kernelName)
         {
@@ -57,7 +57,7 @@ namespace OpenCL.NET.Programs
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the program.
+        ///     Disposes of the resources that have been acquired by the program.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()

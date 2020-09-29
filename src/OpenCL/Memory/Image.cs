@@ -7,7 +7,7 @@ using System;
 namespace OpenCL.NET.Memory
 {
     /// <summary>
-    /// Represents an OpenCL image.
+    ///     Represents an OpenCL image.
     /// </summary>
     public class Image : MemoryObject
     {
@@ -15,7 +15,7 @@ namespace OpenCL.NET.Memory
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Image"/> instance.
+        ///     Initializes a new <see cref="Image" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL image.</param>
         public Image(IntPtr handle, object handleIdentifier)

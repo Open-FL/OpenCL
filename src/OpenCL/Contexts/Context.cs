@@ -15,12 +15,14 @@ using OpenCL.NET.Interop.Programs;
 using OpenCL.NET.Memory;
 using OpenCL.NET.Programs;
 
+using MemoryFlag = OpenCL.NET.Memory.MemoryFlag;
+
 #endregion
 
 namespace OpenCL.NET.Contexts
 {
     /// <summary>
-    /// Represents an OpenCL context.
+    ///     Represents an OpenCL context.
     /// </summary>
     public class Context : HandleBase
     {
@@ -28,7 +30,7 @@ namespace OpenCL.NET.Contexts
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Context"/> instance.
+        ///     Initializes a new <see cref="Context" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL context.</param>
         /// <param name="devices">The devices for which the context was created.</param>
@@ -43,7 +45,7 @@ namespace OpenCL.NET.Contexts
         #region Public Properties
 
         /// <summary>
-        /// Gets the devices for which the context was created.
+        ///     Gets the devices for which the context was created.
         /// </summary>
         public IEnumerable<Device> Devices { get; }
 
@@ -52,14 +54,18 @@ namespace OpenCL.NET.Contexts
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the program build.
+        ///     Retrieves the specified information about the program build.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="program">The handle to the program for which the build information is to be retrieved.</param>
-        /// <param name="device">The device for which the build information is to be retrieved.</param>
-        /// <param name="programBuildInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="program">The handle to the program for which the build information is to be retrieved.</param>
+        ///     <param name="device">The device for which the build information is to be retrieved.</param>
+        ///     <param name="programBuildInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         private T GetProgramBuildInformation<T>(
             IntPtr program, Device device,
             ProgramBuildInformation programBuildInformation)
@@ -102,7 +108,7 @@ namespace OpenCL.NET.Contexts
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the context.
+        ///     Disposes of the resources that have been acquired by the context.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -122,7 +128,7 @@ namespace OpenCL.NET.Contexts
         #region Private Delegates
 
         /// <summary>
-        /// A delegate for the callback of <see cref="BuildProgram"/>.
+        ///     A delegate for the callback of <see cref="BuildProgram" />.
         /// </summary>
         /// <param name="program">The program that was compiled and linked.</param>
         /// <param name="userData">User-defined data that can be passed to the callback subscription.</param>
@@ -133,10 +139,13 @@ namespace OpenCL.NET.Contexts
         #region Public Methods
 
         /// <summary>
-        /// Creates a program from the provided source codes asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source codes asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="sources">The source codes from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Task<Program> CreateAndBuildProgramFromStringAsync(IEnumerable<string> sources)
         {
@@ -292,10 +301,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source codes. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source codes. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="sources">The source codes from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromString(IEnumerable<string> sources)
         {
@@ -353,10 +365,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source code asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source code asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="source">The source code from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Task<Program> CreateAndBuildProgramFromStringAsync(string source)
         {
@@ -364,10 +379,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source code. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source code. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="source">The source code from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromString(string source)
         {
@@ -375,10 +393,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source streams asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source streams asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="streams">The source streams from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public async Task<Program> CreateAndBuildProgramFromStreamAsync(IEnumerable<Stream> streams)
         {
@@ -397,10 +418,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source streams. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source streams. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="streams">The source streams from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromStream(IEnumerable<Stream> streams)
         {
@@ -419,10 +443,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source stream asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source stream asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="stream">The source stream from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Task<Program> CreateAndBuildProgramFromStreamAsync(Stream stream)
         {
@@ -430,10 +457,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source stream. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source stream. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="stream">The source stream from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromStream(Stream stream)
         {
@@ -441,10 +471,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source files asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source files asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="fileNames">The source files from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public async Task<Program> CreateAndBuildProgramFromFileAsync(IEnumerable<string> fileNames)
         {
@@ -463,10 +496,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source files. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source files. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="fileNames">The source files from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromFile(IEnumerable<string> fileNames)
         {
@@ -478,10 +514,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source file asynchronously. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source file asynchronously. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="fileName">The source file from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Task<Program> CreateAndBuildProgramFromFileAsync(string fileName)
         {
@@ -489,10 +528,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a program from the provided source file. The program is created, compiled, and linked.
+        ///     Creates a program from the provided source file. The program is created, compiled, and linked.
         /// </summary>
         /// <param name="fileName">The source file from which the program is to be created.</param>
-        /// <exception cref="OpenClException">If the program could not be created, compiled, or linked, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the program could not be created, compiled, or linked, then an
+        ///     <see cref="OpenClException" /> is thrown.
+        /// </exception>
         /// <returns>Returns the created program.</returns>
         public Program CreateAndBuildProgramFromFile(string fileName)
         {
@@ -500,13 +542,16 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a new memory buffer with the specified flags and of the specified size.
+        ///     Creates a new memory buffer with the specified flags and of the specified size.
         /// </summary>
         /// <param name="memoryFlags">The flags, that determines the how the memory buffer is created and how it can be accessed.</param>
         /// <param name="size">The size of memory that should be allocated for the memory buffer.</param>
-        /// <exception cref="OpenClException">If the memory buffer could not be created, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the memory buffer could not be created, then an <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         /// <returns>Returns the created memory buffer.</returns>
-        public MemoryBuffer CreateBuffer(Memory.MemoryFlag memoryFlags, int size, object handleIdentifier)
+        public MemoryBuffer CreateBuffer(MemoryFlag memoryFlags, int size, object handleIdentifier)
         {
             // Creates a new memory buffer of the specified size and with the specified memory flags
             IntPtr memoryBufferPointer = MemoryNativeApi.CreateBuffer(
@@ -529,19 +574,23 @@ namespace OpenCL.NET.Contexts
 
 
         /// <summary>
-        /// Creates a new memory buffer with the specified flags. The size of memory allocated for the memory buffer is determined by <see cref="T"/> and the number of elements.
+        ///     Creates a new memory buffer with the specified flags. The size of memory allocated for the memory buffer is
+        ///     determined by <see cref="T" /> and the number of elements.
         /// </summary>
         /// <typeparam name="T">The size of the memory buffer will be determined by the structure specified in the type parameter.</typeparam>
         /// <param name="memoryFlags">The flags, that determines the how the memory buffer is created and how it can be accessed.</param>
-        /// <exception cref="OpenClException">If the memory buffer could not be created, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the memory buffer could not be created, then an <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         /// <returns>Returns the created memory buffer.</returns>
-        public MemoryBuffer CreateBuffer<T>(Memory.MemoryFlag memoryFlags, int size, object handleIdentifier)
+        public MemoryBuffer CreateBuffer<T>(MemoryFlag memoryFlags, int size, object handleIdentifier)
             where T : struct
         {
             return CreateBuffer(memoryFlags, Marshal.SizeOf<T>() * size, handleIdentifier);
         }
 
-        public MemoryBuffer CreateBuffer(Memory.MemoryFlag memoryFlags, Type t, object[] value, object handleIdentifier)
+        public MemoryBuffer CreateBuffer(MemoryFlag memoryFlags, Type t, object[] value, object handleIdentifier)
         {
             // Tries to create the memory buffer, if anything goes wrong, then it is crucial to free the allocated memory
             IntPtr hostBufferPointer = IntPtr.Zero;
@@ -584,14 +633,18 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a new memory buffer with the specified flags for the specified array. The size of memory 1allocated for the memory buffer is determined by <see cref="T"/> and the number of elements in the array.
+        ///     Creates a new memory buffer with the specified flags for the specified array. The size of memory 1allocated for the
+        ///     memory buffer is determined by <see cref="T" /> and the number of elements in the array.
         /// </summary>
         /// <typeparam name="T">The size of the memory buffer will be determined by the structure specified in the type parameter.</typeparam>
         /// <param name="memoryFlags">The flags, that determines the how the memory buffer is created and how it can be accessed.</param>
         /// <param name="value">The value that is to be copied over to the device.</param>
-        /// <exception cref="OpenClException">If the memory buffer could not be created, then an <see cref="OpenClException"/> is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the memory buffer could not be created, then an <see cref="OpenClException" /> is
+        ///     thrown.
+        /// </exception>
         /// <returns>Returns the created memory buffer.</returns>
-        public MemoryBuffer CreateBuffer<T>(Memory.MemoryFlag memoryFlags, T[] value, object handleIdentifier)
+        public MemoryBuffer CreateBuffer<T>(MemoryFlag memoryFlags, T[] value, object handleIdentifier)
             where T : struct
         {
             return CreateBuffer(memoryFlags, typeof(T), Array.ConvertAll(value, x => (object) x), handleIdentifier);
@@ -602,10 +655,13 @@ namespace OpenCL.NET.Contexts
         #region Public Static Methods
 
         /// <summary>
-        /// Creates a new context for the specified device.
+        ///     Creates a new context for the specified device.
         /// </summary>
         /// <param name="device">The device for which the context is to be created.</param>
-        /// <exception cref="OpenClException">If the context could not be created, then an <see cref="OpenClException"/> exception is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the context could not be created, then an <see cref="OpenClException" /> exception
+        ///     is thrown.
+        /// </exception>
         /// <returns>Returns the created context.</returns>
         public static Context CreateContext(Device device)
         {
@@ -613,10 +669,13 @@ namespace OpenCL.NET.Contexts
         }
 
         /// <summary>
-        /// Creates a new context for the specified device.
+        ///     Creates a new context for the specified device.
         /// </summary>
         /// <param name="devices">The devices for which the context is to be created.</param>
-        /// <exception cref="OpenClException">If the context could not be created, then an <see cref="OpenClException"/> exception is thrown.</exception>
+        /// <exception cref="OpenClException">
+        ///     If the context could not be created, then an <see cref="OpenClException" /> exception
+        ///     is thrown.
+        /// </exception>
         /// <returns>Returns the created context.</returns>
         public static Context CreateContext(IEnumerable<Device> devices)
         {

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 namespace OpenCL.NET.Interop.Memory
 {
     /// <summary>
-    /// Represents the image format descriptor structure.
+    ///     Represents the image format descriptor structure.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct ImageFormat
@@ -16,12 +16,14 @@ namespace OpenCL.NET.Interop.Memory
         #region Public Properties
 
         /// <summary>
-        /// Contains a value that specifies the number of channels and the channel layout i.e. the memory layout in which channels are stored in the image.
+        ///     Contains a value that specifies the number of channels and the channel layout i.e. the memory layout in which
+        ///     channels are stored in the image.
         /// </summary>
         public ChannelOrder ChannelOrder;
 
         /// <summary>
-        /// Contains a value that describes the size of the channel data type. The number of bits per element determined by the <see cref="ChannelDataType"/> and <see cref="ChannelOrder"/> must be a power of two.
+        ///     Contains a value that describes the size of the channel data type. The number of bits per element determined by the
+        ///     <see cref="ChannelDataType" /> and <see cref="ChannelOrder" /> must be a power of two.
         /// </summary>
         public ChannelType ChannelDataType;
 

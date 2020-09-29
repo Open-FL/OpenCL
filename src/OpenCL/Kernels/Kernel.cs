@@ -12,7 +12,7 @@ using OpenCL.NET.Memory;
 namespace OpenCL.NET.Kernels
 {
     /// <summary>
-    /// Represents an OpenCL kernel.
+    ///     Represents an OpenCL kernel.
     /// </summary>
     public class Kernel : HandleBase
     {
@@ -20,7 +20,7 @@ namespace OpenCL.NET.Kernels
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Kernel"/> instance.
+        ///     Initializes a new <see cref="Kernel" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL kernel.</param>
         internal Kernel(IntPtr handle)
@@ -33,12 +33,16 @@ namespace OpenCL.NET.Kernels
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the OpenCL kernel.
+        ///     Retrieves the specified information about the OpenCL kernel.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="kernelInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="kernelInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         private T GetKernelInformation<T>(KernelInformation kernelInformation)
         {
             // Retrieves the size of the return value in bytes, this is used to later get the full information
@@ -78,7 +82,7 @@ namespace OpenCL.NET.Kernels
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the kernel.
+        ///     Disposes of the resources that have been acquired by the kernel.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -98,12 +102,12 @@ namespace OpenCL.NET.Kernels
         #region Public Properties
 
         /// <summary>
-        /// Contains the function name of the OpenCL kernel.
+        ///     Contains the function name of the OpenCL kernel.
         /// </summary>
         private string functionName;
 
         /// <summary>
-        /// Gets the function name of the OpenCL kernel.
+        ///     Gets the function name of the OpenCL kernel.
         /// </summary>
         public string FunctionName
         {
@@ -119,12 +123,12 @@ namespace OpenCL.NET.Kernels
         }
 
         /// <summary>
-        /// Contains the number of arguments, that the kernel function has.
+        ///     Contains the number of arguments, that the kernel function has.
         /// </summary>
         private int? numberOfArguments;
 
         /// <summary>
-        /// Gets the number of arguments, that the kernel function has.
+        ///     Gets the number of arguments, that the kernel function has.
         /// </summary>
         public int NumberOfArguments
         {
@@ -144,7 +148,7 @@ namespace OpenCL.NET.Kernels
         #region Public Methods
 
         /// <summary>
-        /// Sets the specified argument to the specified value.
+        ///     Sets the specified argument to the specified value.
         /// </summary>
         /// <param name="index">The index of the parameter.</param>
         /// <param name="memoryObject">The memory object that contains the value to which the kernel argument is to be set.</param>
@@ -217,7 +221,7 @@ namespace OpenCL.NET.Kernels
         }
 
         /// <summary>
-        /// Sets the specified argument to the specified value.
+        ///     Sets the specified argument to the specified value.
         /// </summary>
         /// <param name="index">The index of the parameter.</param>
         /// <param name="value">The memory object that contains the value to which the kernel argument is to be set.</param>

@@ -12,7 +12,7 @@ using OpenCL.NET.Interop.Devices;
 namespace OpenCL.NET.Devices
 {
     /// <summary>
-    /// Represents an OpenCL device.
+    ///     Represents an OpenCL device.
     /// </summary>
     public class Device : HandleBase
     {
@@ -20,7 +20,7 @@ namespace OpenCL.NET.Devices
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="Device"/> instance.
+        ///     Initializes a new <see cref="Device" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL device.</param>
         internal Device(IntPtr handle)
@@ -33,12 +33,16 @@ namespace OpenCL.NET.Devices
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the device.
+        ///     Retrieves the specified information about the device.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="deviceInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="deviceInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         public T GetDeviceInformation<T>(DeviceInformation deviceInformation)
         {
             // Retrieves the size of the return value in bytes, this is used to later get the full information
@@ -79,7 +83,7 @@ namespace OpenCL.NET.Devices
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the command queue.
+        ///     Disposes of the resources that have been acquired by the command queue.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -99,12 +103,12 @@ namespace OpenCL.NET.Devices
         #region Public Properties
 
         /// <summary>
-        /// Contains the name of the device.
+        ///     Contains the name of the device.
         /// </summary>
         private string name;
 
         /// <summary>
-        /// Gets the name of the device.
+        ///     Gets the name of the device.
         /// </summary>
         public string Name
         {
@@ -120,12 +124,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains the name of the vendor of the device.
+        ///     Contains the name of the vendor of the device.
         /// </summary>
         private string vendor;
 
         /// <summary>
-        /// Gets the name of the vendor of the device.
+        ///     Gets the name of the vendor of the device.
         /// </summary>
         public string Vendor
         {
@@ -141,12 +145,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains the version of the device driver.
+        ///     Contains the version of the device driver.
         /// </summary>
         private string driverVersion;
 
         /// <summary>
-        /// Gets the version of the device driver
+        ///     Gets the version of the device driver
         /// </summary>
         public string DriverVersion
         {
@@ -162,12 +166,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains the global memory size of the device.
+        ///     Contains the global memory size of the device.
         /// </summary>
         private long? globalMemorySize;
 
         /// <summary>
-        /// Gets the global memory size of the device.
+        ///     Gets the global memory size of the device.
         /// </summary>
         public long GlobalMemorySize
         {
@@ -183,12 +187,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains the number of bits, that the device can use to address its memory.
+        ///     Contains the number of bits, that the device can use to address its memory.
         /// </summary>
         private int? addressBits;
 
         /// <summary>
-        /// Gets the number of bits, that the device can use to address its memory.
+        ///     Gets the number of bits, that the device can use to address its memory.
         /// </summary>
         public int AddressBits
         {
@@ -204,12 +208,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains the maximum clock frequency of the device in MHz.
+        ///     Contains the maximum clock frequency of the device in MHz.
         /// </summary>
         private int? maximumClockFrequency;
 
         /// <summary>
-        /// Gets the maximum clock frequency of the device in MHz.
+        ///     Gets the maximum clock frequency of the device in MHz.
         /// </summary>
         public int MaximumClockFrequency
         {
@@ -225,12 +229,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains a value that determines whether the device is currently available.
+        ///     Contains a value that determines whether the device is currently available.
         /// </summary>
         private bool? isAvailable;
 
         /// <summary>
-        /// Gets a value that determines whether the device is currently available.
+        ///     Gets a value that determines whether the device is currently available.
         /// </summary>
         public bool IsAvailable
         {
@@ -246,12 +250,12 @@ namespace OpenCL.NET.Devices
         }
 
         /// <summary>
-        /// Contains a list of all the built-in kernels.
+        ///     Contains a list of all the built-in kernels.
         /// </summary>
         private IEnumerable<string> builtInKernels;
 
         /// <summary>
-        /// Gets a list of all the built-in kernels.
+        ///     Gets a list of all the built-in kernels.
         /// </summary>
         public IEnumerable<string> BuiltInKernels
         {

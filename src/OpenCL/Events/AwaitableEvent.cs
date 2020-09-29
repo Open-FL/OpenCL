@@ -12,8 +12,10 @@ using OpenCL.NET.Interop.Events;
 namespace OpenCL.NET.Events
 {
     /// <summary>
-    /// Represents an event, which is returned by all OpenCL methods, that take longer. They can be used await asynchronous API calls. This class is awaitable and can be used with the C# <c>await</c> keyword. Please not, that when
-    /// the awaitable event is awaited, then it is auto-disposed, but when the awaitable event is not awaited, then it must be disposed of manually.
+    ///     Represents an event, which is returned by all OpenCL methods, that take longer. They can be used await asynchronous
+    ///     API calls. This class is awaitable and can be used with the C# <c>await</c> keyword. Please not, that when
+    ///     the awaitable event is awaited, then it is auto-disposed, but when the awaitable event is not awaited, then it must
+    ///     be disposed of manually.
     /// </summary>
     public class AwaitableEvent : HandleBase
     {
@@ -21,7 +23,7 @@ namespace OpenCL.NET.Events
         #region Constructors
 
         /// <summary>
-        /// Initializes a new <see cref="AwaitableEvent"/> instance.
+        ///     Initializes a new <see cref="AwaitableEvent" /> instance.
         /// </summary>
         /// <param name="handle">The handle to the OpenCL event.</param>
         public AwaitableEvent(IntPtr handle)
@@ -107,12 +109,16 @@ namespace OpenCL.NET.Events
         #region Private Methods
 
         /// <summary>
-        /// Retrieves the specified information about the OpenCL event.
+        ///     Retrieves the specified information about the OpenCL event.
         /// </summary>
-        /// <typeparam name="T">The type of the data that is to be returned.</param>
-        /// <param name="eventInformation">The kind of information that is to be retrieved.</param>
-        /// <exception cref="OpenClException">If the information could not be retrieved, then an <see cref="OpenClException"/> is thrown.</exception>
-        /// <returns>Returns the specified information.</returns>
+        /// <typeparam name="T">
+        ///     The type of the data that is to be returned.</param>
+        ///     <param name="eventInformation">The kind of information that is to be retrieved.</param>
+        ///     <exception cref="OpenClException">
+        ///         If the information could not be retrieved, then an <see cref="OpenClException" />
+        ///         is thrown.
+        ///     </exception>
+        ///     <returns>Returns the specified information.</returns>
         private T GetEventInformation<T>(EventInformation eventInformation)
         {
             // Retrieves the size of the return value in bytes, this is used to later get the full information
@@ -147,7 +153,7 @@ namespace OpenCL.NET.Events
         #region IDisposable Implementation
 
         /// <summary>
-        /// Disposes of the resources that have been acquired by the event.
+        ///     Disposes of the resources that have been acquired by the event.
         /// </summary>
         /// <param name="disposing">Determines whether managed object or managed and unmanaged resources should be disposed of.</param>
         public override void Dispose()
@@ -167,7 +173,7 @@ namespace OpenCL.NET.Events
         #region Private Delegates
 
         /// <summary>
-        /// A delegate for the callback of wait event.
+        ///     A delegate for the callback of wait event.
         /// </summary>
         /// <param name="waitEvent">A pointer to the OpenCL event object.</param>
         /// <param name="userData">User-defined data that can be passed to the event subscription.</param>
@@ -178,12 +184,13 @@ namespace OpenCL.NET.Events
         #region Public Properties
 
         /// <summary>
-        /// Gets the current command execution status code. This is the raw numeric status code, which can be helpful, when the command raised an error, to retrieve more information about the type of error that was returned.
+        ///     Gets the current command execution status code. This is the raw numeric status code, which can be helpful, when the
+        ///     command raised an error, to retrieve more information about the type of error that was returned.
         /// </summary>
         public int CommandExecutionStatusCode => GetEventInformation<int>(EventInformation.CommandExecutionStatus);
 
         /// <summary>
-        /// Gets the current command execution status.
+        ///     Gets the current command execution status.
         /// </summary>
         public CommandExecutionStatus CommandExecutionStatus
         {
@@ -204,22 +211,22 @@ namespace OpenCL.NET.Events
         #region Public Events
 
         /// <summary>
-        /// An event, which is raised, when the command gets enqueued to a command-queue.
+        ///     An event, which is raised, when the command gets enqueued to a command-queue.
         /// </summary>
         public event EventHandler OnQueued;
 
         /// <summary>
-        /// An event, which is raised, when the command is submitted to a device.
+        ///     An event, which is raised, when the command is submitted to a device.
         /// </summary>
         public event EventHandler OnSubmitted;
 
         /// <summary>
-        /// An event, which is raised, when the command is being executed on a device.
+        ///     An event, which is raised, when the command is being executed on a device.
         /// </summary>
         public event EventHandler OnRunning;
 
         /// <summary>
-        /// An event, which is raised, when the command completes successfully or with an error.
+        ///     An event, which is raised, when the command completes successfully or with an error.
         /// </summary>
         public event EventHandler OnCompleted;
 
