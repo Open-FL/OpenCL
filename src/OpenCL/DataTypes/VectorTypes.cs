@@ -439,8 +439,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct char16 : IVectorType
     {
 
@@ -1089,8 +1089,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct uchar16 : IVectorType
     {
 
@@ -1739,8 +1739,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct short16 : IVectorType
     {
 
@@ -2389,8 +2389,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct ushort16 : IVectorType
     {
 
@@ -3039,8 +3039,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct int16 : IVectorType
     {
 
@@ -3689,8 +3689,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct uint16 : IVectorType
     {
 
@@ -4339,8 +4339,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct long16 : IVectorType
     {
 
@@ -4989,8 +4989,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct ulong16 : IVectorType
     {
 
@@ -5639,8 +5639,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct float16 : IVectorType
     {
 
@@ -6289,8 +6289,8 @@ namespace OpenCL.NET.DataTypes
 
     [StructLayout(LayoutKind.Explicit)]
     [DebuggerDisplay(
-        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
-    )]
+                        "s0={s0}, s1={s1}, s2={s2}, s3={s3}, s4={s4}, s5={s5}, s6={s6}, s7={s7}, s8={s8}, s9={s9}, sa={sa}, sb={sb}, sc={sc}, sd={sd}, se={se}, sf={sf}"
+                    )]
     public struct double16 : IVectorType
     {
 

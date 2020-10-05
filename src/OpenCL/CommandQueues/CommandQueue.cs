@@ -140,10 +140,10 @@ namespace OpenCL.NET.CommandQueues
                                                       CommandExecutionStatus.Error)
                                                   {
                                                       taskCompletionSource.TrySetException(
-                                                                                           new OpenClException(
-                                                                                                               $"The command completed with the error code {awaitableEvent.CommandExecutionStatusCode}."
-                                                                                                              )
-                                                                                          );
+                                                           new OpenClException(
+                                                                               $"The command completed with the error code {awaitableEvent.CommandExecutionStatusCode}."
+                                                                              )
+                                                          );
                                                       return;
                                                   }
 
@@ -153,11 +153,11 @@ namespace OpenCL.NET.CommandQueues
                                                   {
                                                       resultValue[i] =
                                                           Marshal.PtrToStructure<T>(
-                                                                                    IntPtr.Add(
-                                                                                               resultValuePointer,
-                                                                                               i * Marshal.SizeOf<T>()
-                                                                                              )
-                                                                                   );
+                                                               IntPtr.Add(
+                                                                          resultValuePointer,
+                                                                          i * Marshal.SizeOf<T>()
+                                                                         )
+                                                              );
                                                   }
 
                                                   // Sets the result
@@ -329,10 +329,10 @@ namespace OpenCL.NET.CommandQueues
                                                       CommandExecutionStatus.Error)
                                                   {
                                                       taskCompletionSource.TrySetException(
-                                                                                           new OpenClException(
-                                                                                                               $"The command completed with the error code {awaitableEvent.CommandExecutionStatusCode}."
-                                                                                                              )
-                                                                                          );
+                                                           new OpenClException(
+                                                                               $"The command completed with the error code {awaitableEvent.CommandExecutionStatusCode}."
+                                                                              )
+                                                          );
                                                   }
                                                   else
                                                   {

@@ -172,113 +172,113 @@ namespace OpenCL.NET.Contexts
                                                     null,
                                                     null,
                                                     Marshal.GetFunctionPointerForDelegate(
-                                                                                          new BuildProgramCallback(
-                                                                                                                   (
-                                                                                                                       builtProgramPointer,
-                                                                                                                       userData) =>
-                                                                                                                   {
-                                                                                                                       // Tries to validate the build, if not successful, then an exception is thrown
-                                                                                                                       try
-                                                                                                                       {
-                                                                                                                           // Cycles over all devices and retrieves the build log for each one, so that the errors that occurred can be added to the exception message (if any error occur during the retrieval, the exception is thrown without the log)
-                                                                                                                           Dictionary
-                                                                                                                           <string
-                                                                                                                             , string
-                                                                                                                           > buildLogs
-                                                                                                                               = new
-                                                                                                                                   Dictionary
-                                                                                                                                   <string
-                                                                                                                                     , string
-                                                                                                                                   >();
-                                                                                                                           foreach
-                                                                                                                           (Device
-                                                                                                                                device
-                                                                                                                               in
-                                                                                                                               Devices
-                                                                                                                           )
-                                                                                                                           {
-                                                                                                                               try
-                                                                                                                               {
-                                                                                                                                   string
-                                                                                                                                       buildLog
-                                                                                                                                           = GetProgramBuildInformation
-                                                                                                                                           <string
-                                                                                                                                           >(
-                                                                                                                                             builtProgramPointer,
-                                                                                                                                             device,
-                                                                                                                                             ProgramBuildInformation
-                                                                                                                                                 .Log
-                                                                                                                                            ).Trim();
-                                                                                                                                   if
-                                                                                                                                   (!string
-                                                                                                                                        .IsNullOrWhiteSpace(
-                                                                                                                                                            buildLog
-                                                                                                                                                           ))
-                                                                                                                                   {
-                                                                                                                                       buildLogs
-                                                                                                                                           .Add(
-                                                                                                                                                device
-                                                                                                                                                    .Name,
-                                                                                                                                                buildLog
-                                                                                                                                               );
-                                                                                                                                   }
-                                                                                                                               }
-                                                                                                                               catch
-                                                                                                                               (OpenClException
-                                                                                                                               )
-                                                                                                                               {
-                                                                                                                               }
-                                                                                                                           }
+                                                         new BuildProgramCallback(
+                                                              (
+                                                                  builtProgramPointer,
+                                                                  userData) =>
+                                                              {
+                                                                  // Tries to validate the build, if not successful, then an exception is thrown
+                                                                  try
+                                                                  {
+                                                                      // Cycles over all devices and retrieves the build log for each one, so that the errors that occurred can be added to the exception message (if any error occur during the retrieval, the exception is thrown without the log)
+                                                                      Dictionary
+                                                                      <string
+                                                                        , string
+                                                                      > buildLogs
+                                                                          = new
+                                                                              Dictionary
+                                                                              <string
+                                                                                , string
+                                                                              >();
+                                                                      foreach
+                                                                      (Device
+                                                                           device
+                                                                          in
+                                                                          Devices
+                                                                      )
+                                                                      {
+                                                                          try
+                                                                          {
+                                                                              string
+                                                                                  buildLog
+                                                                                      = GetProgramBuildInformation
+                                                                                      <string
+                                                                                      >(
+                                                                                           builtProgramPointer,
+                                                                                           device,
+                                                                                           ProgramBuildInformation
+                                                                                               .Log
+                                                                                          ).Trim();
+                                                                              if
+                                                                              (!string
+                                                                                   .IsNullOrWhiteSpace(
+                                                                                        buildLog
+                                                                                       ))
+                                                                              {
+                                                                                  buildLogs
+                                                                                      .Add(
+                                                                                           device
+                                                                                               .Name,
+                                                                                           buildLog
+                                                                                          );
+                                                                              }
+                                                                          }
+                                                                          catch
+                                                                          (OpenClException
+                                                                          )
+                                                                          {
+                                                                          }
+                                                                      }
 
-                                                                                                                           // Checks if there were any errors, if so then the build logs are compiled into a formatted string and integrates it into the exception message
-                                                                                                                           if
-                                                                                                                           (buildLogs
-                                                                                                                               .Any()
-                                                                                                                           )
-                                                                                                                           {
-                                                                                                                               string
-                                                                                                                                   buildLogString
-                                                                                                                                       = string
-                                                                                                                                           .Join(
-                                                                                                                                                 $"{Environment.NewLine}{Environment.NewLine}",
-                                                                                                                                                 buildLogs
-                                                                                                                                                     .Select(
-                                                                                                                                                             keyValuePair =>
-                                                                                                                                                                 $" Build log for device \"{keyValuePair.Key}\":{Environment.NewLine}{keyValuePair.Value}"
-                                                                                                                                                            )
-                                                                                                                                                );
-                                                                                                                               taskCompletionSource
-                                                                                                                                   .TrySetException(
-                                                                                                                                                    new
-                                                                                                                                                        OpenClException(
-                                                                                                                                                                        $"The program could not be compiled and linked.{Environment.NewLine}{Environment.NewLine}{buildLogString}",
-                                                                                                                                                                        result1
-                                                                                                                                                                       )
-                                                                                                                                                   );
-                                                                                                                           }
+                                                                      // Checks if there were any errors, if so then the build logs are compiled into a formatted string and integrates it into the exception message
+                                                                      if
+                                                                      (buildLogs
+                                                                          .Any()
+                                                                      )
+                                                                      {
+                                                                          string
+                                                                              buildLogString
+                                                                                  = string
+                                                                                      .Join(
+                                                                                           $"{Environment.NewLine}{Environment.NewLine}",
+                                                                                           buildLogs
+                                                                                               .Select(
+                                                                                                    keyValuePair =>
+                                                                                                        $" Build log for device \"{keyValuePair.Key}\":{Environment.NewLine}{keyValuePair.Value}"
+                                                                                                   )
+                                                                                          );
+                                                                          taskCompletionSource
+                                                                              .TrySetException(
+                                                                                   new
+                                                                                       OpenClException(
+                                                                                            $"The program could not be compiled and linked.{Environment.NewLine}{Environment.NewLine}{buildLogString}",
+                                                                                            result1
+                                                                                           )
+                                                                                  );
+                                                                      }
 
-                                                                                                                           // Since the build was successful, the program is created and the task completion source is resolved with it Creates the new program and returns it
-                                                                                                                           taskCompletionSource
-                                                                                                                               .TrySetResult(
-                                                                                                                                             new
-                                                                                                                                                 Program(
-                                                                                                                                                         builtProgramPointer
-                                                                                                                                                        )
-                                                                                                                                            );
-                                                                                                                       }
-                                                                                                                       catch
-                                                                                                                       (Exception
-                                                                                                                           exception
-                                                                                                                       )
-                                                                                                                       {
-                                                                                                                           taskCompletionSource
-                                                                                                                               .TrySetException(
-                                                                                                                                                exception
-                                                                                                                                               );
-                                                                                                                       }
-                                                                                                                   }
-                                                                                                                  )
-                                                                                         ),
+                                                                      // Since the build was successful, the program is created and the task completion source is resolved with it Creates the new program and returns it
+                                                                      taskCompletionSource
+                                                                          .TrySetResult(
+                                                                               new
+                                                                                   Program(
+                                                                                        builtProgramPointer
+                                                                                       )
+                                                                              );
+                                                                  }
+                                                                  catch
+                                                                  (Exception
+                                                                      exception
+                                                                  )
+                                                                  {
+                                                                      taskCompletionSource
+                                                                          .TrySetException(
+                                                                               exception
+                                                                              );
+                                                                  }
+                                                              }
+                                                             )
+                                                        ),
                                                     IntPtr.Zero
                                                    );
 

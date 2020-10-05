@@ -172,8 +172,8 @@ namespace OpenCL.NET.Kernels
                                                                    (uint) index,
                                                                    new UIntPtr(
                                                                                (uint) Marshal.SizeOf(
-                                                                                                     memoryObject.Handle
-                                                                                                    )
+                                                                                    memoryObject.Handle
+                                                                                   )
                                                                               ),
                                                                    garbageCollectorHandle.AddrOfPinnedObject()
                                                                   );

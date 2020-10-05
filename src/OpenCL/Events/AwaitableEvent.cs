@@ -34,72 +34,72 @@ namespace OpenCL.NET.Events
                                              Handle,
                                              (int) CommandExecutionStatus.Queued,
                                              Marshal.GetFunctionPointerForDelegate(
-                                                                                   new AwaitableEventCallback(
-                                                                                                              (
-                                                                                                                      waitEvent,
-                                                                                                                      userData) =>
-                                                                                                                  OnQueued
-                                                                                                                      ?.Invoke(
-                                                                                                                               this,
-                                                                                                                               new
-                                                                                                                                   EventArgs()
-                                                                                                                              )
-                                                                                                             )
-                                                                                  ),
+                                                  new AwaitableEventCallback(
+                                                                             (
+                                                                                     waitEvent,
+                                                                                     userData) =>
+                                                                                 OnQueued
+                                                                                     ?.Invoke(
+                                                                                          this,
+                                                                                          new
+                                                                                              EventArgs()
+                                                                                         )
+                                                                            )
+                                                 ),
                                              IntPtr.Zero
                                             );
             EventsNativeApi.SetEventCallback(
                                              Handle,
                                              (int) CommandExecutionStatus.Submitted,
                                              Marshal.GetFunctionPointerForDelegate(
-                                                                                   new AwaitableEventCallback(
-                                                                                                              (
-                                                                                                                      waitEvent,
-                                                                                                                      userData) =>
-                                                                                                                  OnSubmitted
-                                                                                                                      ?.Invoke(
-                                                                                                                               this,
-                                                                                                                               new
-                                                                                                                                   EventArgs()
-                                                                                                                              )
-                                                                                                             )
-                                                                                  ),
+                                                  new AwaitableEventCallback(
+                                                                             (
+                                                                                     waitEvent,
+                                                                                     userData) =>
+                                                                                 OnSubmitted
+                                                                                     ?.Invoke(
+                                                                                          this,
+                                                                                          new
+                                                                                              EventArgs()
+                                                                                         )
+                                                                            )
+                                                 ),
                                              IntPtr.Zero
                                             );
             EventsNativeApi.SetEventCallback(
                                              Handle,
                                              (int) CommandExecutionStatus.Running,
                                              Marshal.GetFunctionPointerForDelegate(
-                                                                                   new AwaitableEventCallback(
-                                                                                                              (
-                                                                                                                      waitEvent,
-                                                                                                                      userData) =>
-                                                                                                                  OnRunning
-                                                                                                                      ?.Invoke(
-                                                                                                                               this,
-                                                                                                                               new
-                                                                                                                                   EventArgs()
-                                                                                                                              )
-                                                                                                             )
-                                                                                  ),
+                                                  new AwaitableEventCallback(
+                                                                             (
+                                                                                     waitEvent,
+                                                                                     userData) =>
+                                                                                 OnRunning
+                                                                                     ?.Invoke(
+                                                                                          this,
+                                                                                          new
+                                                                                              EventArgs()
+                                                                                         )
+                                                                            )
+                                                 ),
                                              IntPtr.Zero
                                             );
             EventsNativeApi.SetEventCallback(
                                              Handle,
                                              (int) CommandExecutionStatus.Complete,
                                              Marshal.GetFunctionPointerForDelegate(
-                                                                                   new AwaitableEventCallback(
-                                                                                                              (
-                                                                                                                      waitEvent,
-                                                                                                                      userData) =>
-                                                                                                                  OnCompleted
-                                                                                                                      ?.Invoke(
-                                                                                                                               this,
-                                                                                                                               new
-                                                                                                                                   EventArgs()
-                                                                                                                              )
-                                                                                                             )
-                                                                                  ),
+                                                  new AwaitableEventCallback(
+                                                                             (
+                                                                                     waitEvent,
+                                                                                     userData) =>
+                                                                                 OnCompleted
+                                                                                     ?.Invoke(
+                                                                                          this,
+                                                                                          new
+                                                                                              EventArgs()
+                                                                                         )
+                                                                            )
+                                                 ),
                                              IntPtr.Zero
                                             );
         }

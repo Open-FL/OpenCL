@@ -47,19 +47,19 @@ namespace OpenCL.NET
                 // Since the converter could not be found, a fitting method is searched, if one is found, then it is added to the converter map, otherwise an exception is thrown
                 TypeInfo typeInfo = typeof(InteropConverter).GetTypeInfo();
                 MethodInfo converterMethodInfo = typeInfo.GetMethods().FirstOrDefault(
-                                                                                      method =>
-                                                                                          method.IsStatic &&
-                                                                                          method.ReturnType ==
-                                                                                          targetType &&
-                                                                                          method.GetParameters()
-                                                                                                .Count() ==
-                                                                                          1 &&
-                                                                                          method.GetParameters().First()
-                                                                                                .ParameterType ==
-                                                                                          typeof(byte[]) &&
-                                                                                          method.Name ==
-                                                                                          $"To{targetType.Name}"
-                                                                                     );
+                     method =>
+                         method.IsStatic &&
+                         method.ReturnType ==
+                         targetType &&
+                         method.GetParameters()
+                               .Count() ==
+                         1 &&
+                         method.GetParameters().First()
+                               .ParameterType ==
+                         typeof(byte[]) &&
+                         method.Name ==
+                         $"To{targetType.Name}"
+                    );
                 if (converterMethodInfo == null)
                 {
                     throw new InvalidOperationException(
