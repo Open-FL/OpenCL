@@ -39,7 +39,7 @@ namespace OpenCL.NET
         /// <summary>
         ///     Gets the handle to the OpenCL object.
         /// </summary>
-        internal IntPtr Handle { get; private set; }
+        public IntPtr Handle { get; private set; }
 
         /// <summary>
         ///     Gets a value that determines whether the object has alread been disposed of.
